@@ -1,0 +1,42 @@
+public ContacUsPage(IWebDriver  webdriver)
+{
+
+      this.webDriver = webDriver  ;
+
+// vamos a la opcion generar contructor automaticamente 
+
+}
+
+public enum options 
+
+{
+     ByText,
+     ByValue,
+     ByIndex
+
+}
+
+public void SelectHeadingComboBox(Options option, string value)
+
+{
+    
+IWebElement subjectHeadingComboBox =  Webdriver.FindElement(By.Id("id_contact"));
+selectElement subjectHeadingComboBox = new SelectElement(subjecHeading);
+
+
+switch(option)
+{
+
+ case Options.ByText;
+      subjectHeadingComboBox.SelectByText(value);
+    break;
+case Options.ByValue;
+     subjectHeadingComboBox.SelectByValue(value);
+    break;
+
+case Options.ByIndex;
+     subjectHeadingComboBox.SelectByIndex(parse);
+      break;
+
+
+   }
